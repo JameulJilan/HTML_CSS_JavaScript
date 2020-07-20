@@ -1,0 +1,22 @@
+ #content-viewer {
+     height: 100vh;
+     width: 100vw;
+ }
+
+ .main-content {
+     background-color: aquamarine;
+ }
+
+
+
+
+ @media(max-width:768px) {
+
+     #navbarSupportedContent {
+         background-color: green;
+     }
+
+     #navbarSupportedContent a {
+         color: red;
+     }
+ }
