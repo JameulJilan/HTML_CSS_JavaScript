@@ -22,7 +22,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
   var menuItemsTitleHtml = "snippets/menu-items-title.html";
   var menuItemHtml = "snippets/menu-item.html";
-  var randomTag = ['A', 'B', 'C', 'CM', 'CSR', 'CU', 'D', 'DK', 'DS', 'F', 'FR', 'FY', 'L', 'NF', 'NL', 'NS', 'PF', 'SO', 'SP', 'SR', 'SS', 'T', 'V', 'VG'];
+  var randomTag = ['L', 'A', 'B', 'SP', 'C', 'F', 'V', 'DK', 'VG', 'CU', 'NL', 'NF', 'PF', 'FR', 'CM', 'FY', 'SO', 'DS', 'SR', 'D', 'T'];
 
   // Convenience function for inserting innerHTML for 'select'
   var insertHtml = function (selector, html) {
@@ -67,7 +67,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     $ajaxUtils.sendGetRequest(
       homeHtmlUrl,
       function (responseText) {
-        responseText = insertProperty(responseText, "randomCategoryShortName", "randomCategoryShortName");
+        responseText = insertProperty(responseText, "randomCategoryShortName", "'randomCategoryShortName'");
         document.querySelector("#main-content")
           .innerHTML = responseText;
       },
@@ -281,3 +281,6 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
   global.$dc = dc;
 
 })(window);
+
+
+
